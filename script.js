@@ -1,3 +1,4 @@
+// Initialization of astrology information
 const astrology = {
   date: [
     '21 March - 20 April',
@@ -80,3 +81,56 @@ const astrology = {
     }
   ]
 };
+/*
+  * Astrology Randomizer Function:
+    This function will show you a random horoscope, based on the approximate date you may have been born.
+*/
+const randomizer = astrology => {
+  const { date, sign, gloss, horoscope } = astrology;
+  const randomNumber = Math.floor(Math.random() * 12);
+
+  switch (randomNumber) {
+    case 0:
+      return `➣ Know your Horoscope:\n\n• If you're born between: [${date[0]}]\n• Your Sign is: [${sign[0]}]\n• Your Gloss is: [${gloss[0]}]\n\n➢ And this is your Destiny:\n\n❝${horoscope[0].aries}❞`;
+      break;
+    case 1:
+      return `➣ Know your Horoscope:\n\n• If you're born between: [${date[1]}]\n• Your Sign is: [${sign[1]}]\n• Your Gloss is: [${gloss[1]}]\n\n➢ And this is your Destiny:\n\n❝${horoscope[1].taurus}❞`;
+      break;
+    case 2:
+      return `➣ Know your Horoscope:\n\n• If you're born between: [${date[2]}]\n• Your Sign is: [${sign[2]}]\n• Your Gloss is: [${gloss[2]}]\n\n➢ And this is your Destiny:\n\n❝${horoscope[2].gemini}❞`;
+      break;
+    case 3:
+      return `➣ Know your Horoscope:\n\n• If you're born between: [${date[3]}]\n• Your Sign is: [${sign[3]}]\n• Your Gloss is: [${gloss[3]}]\n\n➢ And this is your Destiny:\n\n❝${horoscope[3].cancer}❞`;
+      break;
+    case 4:
+      return `➣ Know your Horoscope:\n\n• If you're born between: [${date[4]}]\n• Your Sign is: [${sign[4]}]\n• Your Gloss is: [${gloss[4]}]\n\n➢ And this is your Destiny:\n\n❝${horoscope[4].leo}❞`;
+      break;
+    case 5:
+      return `➣ Know your Horoscope:\n\n• If you're born between: [${date[5]}]\n• Your Sign is: [${sign[5]}]\n• Your Gloss is: [${gloss[5]}]\n\n➢ And this is your Destiny:\n\n❝${horoscope[5].virgo}❞`;
+      break;
+    case 6:
+      return `➣ Know your Horoscope:\n\n• If you're born between: [${date[6]}]\n• Your Sign is: [${sign[6]}]\n• Your Gloss is: [${gloss[6]}]\n\n➢ And this is your Destiny:\n\n❝${horoscope[6].libra}❞`;
+      break;
+    case 7:
+      return `➣ Know your Horoscope:\n\n• If you're born between: [${date[7]}]\n• Your Sign is: [${sign[7]}]\n• Your Gloss is: [${gloss[7]}]\n\n➢ And this is your Destiny:\n\n❝${horoscope[7].scorpio}❞`;
+      break;
+    case 8:
+      return `➣ Know your Horoscope:\n\n• If you're born between: [${date[8]}]\n• Your Sign is: [${sign[8]}]\n• Your Gloss is: [${gloss[8]}]\n\n➢ And this is your Destiny:\n\n❝${horoscope[8].sagittarius}❞`;
+      break;
+    case 9:
+      return `➣ Know your Horoscope:\n\n• If you're born between: [${date[9]}]\n• Your Sign is: [${sign[9]}]\n• Your Gloss is: [${gloss[9]}]\n\n➢ And this is your Destiny:\n\n❝${horoscope[9].capricorn}❞`;
+      break;
+    case 10:
+      return `➣ Know your Horoscope:\n\n• If you're born between: [${date[10]}]\n• Your Sign is: [${sign[10]}]\n• Your Gloss is: [${gloss[10]}]\n\n➢ And this is your Destiny:\n\n❝${horoscope[10].aquarius}❞`;
+      break;
+    case 11:
+      return `➣ Know your Horoscope:\n\n• If you're born between: [${date[11]}]\n• Your Sign is: [${sign[11]}]\n• Your Gloss is: [${gloss[11]}]\n\n➢ And this is your Destiny:\n\n❝${horoscope[11].pisces}❞`;
+      break;
+  }
+};
+/*
+  * Run the program in the node environment with the following command:
+    "node file-name.js" -> node script.js
+    If your first attempt doesn't go as you expected, run the script a few times to see your birth date.
+*/
+console.log(randomizer(astrology));
